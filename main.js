@@ -2,10 +2,6 @@ import "./style.css";
 import path from "path";
 import javascriptLogo from "./javascript.svg";
 import viteLogo from "/vite.svg";
-document.querySelector("#kyle").onclick = () => {
-  var audio = new Audio("public/sounds/Kyle.wav");
-  audio.play();
-};
 document.querySelector("#God").onclick = () => {
   var audio1 = new Audio("public/sounds/God.wav");
   audio1.play();
