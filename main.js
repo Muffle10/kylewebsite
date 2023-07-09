@@ -3,7 +3,7 @@ import path from "path";
 import javascriptLogo from "./javascript.svg";
 import viteLogo from "/vite.svg";
 document.querySelector("#kyle").onclick = () => {
-  var audio = new Audio("public/sounds/Harpoon.wav");
+  var audio = new Audio("public/sounds/Kyle.wav");
   audio.play();
 };
 document.querySelector("#God").onclick = () => {
