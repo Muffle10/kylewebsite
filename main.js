@@ -84,6 +84,10 @@ document.querySelector("#random").onclick = () => {
       `sounds/${verbs[Math.floor(Math.random() * verbs.length)]}`
     );
   }
+  var last =
+    nouns[Math.floor(Math.random() * nouns.length)] == "I.wav"
+      ? nouns[Math.floor(Math.random() * nouns.length)]
+      : nouns[Math.floor(Math.random() * nouns.length)];
   var audio3 = new Audio(
     `sounds/${nouns[Math.floor(Math.random() * nouns.length)]}`
   );
