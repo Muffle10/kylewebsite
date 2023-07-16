@@ -4,10 +4,7 @@ print("""document.querySelector("#kyle").onclick = () => {
 };""")
 import os
 
-filenames = os.listdir("./sounds")
-text = []
-c = 0
-for i in filenames:
-    c+=1
-    string = """<button id="{name}">{title}</button>""".format(name=i[0:len(i)-4],title=i[0:len(i)-4].replace("_", " ").capitalize())
-    print(string)
+from itertools import permutations
+
+filenames = os.listdir("./public/sounds")
+print(filenames)

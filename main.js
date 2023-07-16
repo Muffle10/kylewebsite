@@ -2,9 +2,103 @@ import "./style.css";
 import path from "path";
 import javascriptLogo from "./javascript.svg";
 import viteLogo from "/vite.svg";
-document.querySelector("#kyle").onclick = () => {
-  var audio1 = new Audio("sounds/God.wav");
-  audio1.play();
+var nouns = [
+  "God.wav",
+  "Jaiden.wav",
+  "Chris.wav",
+  "Bit.wav",
+  "Furnace.wav",
+  "Marqez.wav",
+  "Milk.wav",
+  "Gun.wav",
+  "I.wav",
+  "Treasure.wav",
+  "You.wav",
+  "Today.wav",
+  "Me.wav",
+  "Jesus.wav",
+  "Horrible.wav",
+  "Julianna.wav",
+  "Bucket.wav",
+  "Blender.wav",
+  "Birds.wav",
+  "Job.wav",
+  "Scene.wav",
+  "Harpoon.wav",
+  "We.wav",
+  "Jake.wav",
+  "Boy.wav",
+  "Funny.wav",
+  "Office.wav",
+  "Man.wav",
+  "Soren.wav",
+];
+var coordinate = [
+  "And.wav",
+  "In.wav",
+  "That.wav",
+  "For.wav",
+  "To.wav",
+  "My.wav",
+  "From.wav",
+];
+var articles = ["A.wav", "An.wav", "Woah_exclamation.wav", "The.wav"];
+var verbs = [
+  "Is.wav",
+  "Hide.wav",
+  "Did.wav",
+  "Run.wav",
+  "Has.wav",
+  "Eat.wav",
+  "Need.wav",
+  "See.wav",
+  "Made.wav",
+  "Have.wav",
+];
+var exlamatories = [
+  "Hello.wav",
+  "Bye.wav",
+  "Hide.wav",
+  "Run.wav",
+  "Excellent_2.wav",
+  "Excellent_1.wav",
+  "Woah.wav",
+  "Hey_There.wav",
+  "Go.wav",
+  "Uh.wav",
+  "Hey.wav",
+  "See.wav",
+  "No.wav",
+  "Anyways.wav",
+];
+var answers = ["Yes.wav"];
+document.querySelector("#random").onclick = () => {
+  document.querySelector("#random").disabled = true;
+  var audio1 = new Audio(
+    `sounds/${nouns[Math.floor(Math.random() * nouns.length)]}`
+  );
+  if (audio1 == new Audio(`sounds/I.wav`)) {
+    audio2 = new Audio(`sounds/Am.wav`);
+  } else {
+    var audio2 = new Audio(
+      `sounds/${verbs[Math.floor(Math.random() * verbs.length)]}`
+    );
+  }
+  var audio3 = new Audio(
+    `sounds/${nouns[Math.floor(Math.random() * nouns.length)]}`
+  );
+  setTimeout(() => {
+    audio1.play();
+  }, 0);
+  setTimeout(() => {
+    audio2.play();
+  }, 1000);
+  setTimeout(() => {
+    audio3.play();
+  }, 2000);
+  setTimeout(() => {
+    document.querySelector("#random").disabled = false;
+  }, 2100);
 };
 document.querySelector("#God").onclick = () => {
   var audio1 = new Audio("sounds/God.wav");
